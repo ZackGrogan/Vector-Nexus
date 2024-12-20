@@ -1,0 +1,14 @@
+1.  **Tech Stack:** Prioritize using SQLite for the database, Flask for the backend, Gemini API for data cleaning, Qdrant for vector storage, and Bootstrap for the frontend. Use Docker for containerization.
+2.  **Database:** Design SQLite database schema with clear tables, columns, data types, primary keys, and foreign keys. Implement CRUD operations via Flask routes.
+3.  **Gemini API:** Use `aiolclient` for Gemini API access. Create functions to send text to Gemini for data cleaning suggestions, focusing on missing values and inconsistencies. Handle API responses and errors.
+4.  **Qdrant:** Use Docker to run Qdrant. Ensure the Flask app can access Qdrant. Create Flask routes for Qdrant interactions, including index creation and updates.
+5.  **Dockerization:** Create Dockerfiles for the Flask app and Qdrant (if not using the official image). Use `docker-compose.yml` to manage the multi-container setup, configuring networking between containers.
+6.  **Testing:** Thoroughly test all CRUD operations, Gemini API interactions, and Qdrant interactions. Test the entire system using Docker Compose.
+7.  **Documentation:** Create a README file with setup instructions, technology stack details, key features, and known limitations.
+8.  **Local Execution:** Run the entire system locally using Docker Compose and verify all components are working correctly.
+9.  **Code Organization:** Follow the existing code structure and patterns.
+10. **Error Handling:** Implement robust error handling for database and API interactions.
+11. **Optimization:** Optimize Dockerfiles for size and performance.
+12. **Checklist:** Refer to the `vn-checklist.md` file for task guidance and completion tracking.
+13. **Internal Modules:** Prioritize the use of internal organization modules, packages, and libraries over open-source alternatives when available.
+14. **Acronyms:** Use acronyms without spelling them out.

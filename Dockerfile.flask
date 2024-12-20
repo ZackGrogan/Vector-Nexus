@@ -1,0 +1,26 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    wget \
+    gnupg \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+
+# Update pip and install dependencies
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir pymongo==4.6.1 && \
+    pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+ENV PYTHONPATH=/app
+ENV FLASK_APP=backend.app:app
+ENV FLASK_ENV=development
+ENV FLASK_DEBUG=1
+
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]

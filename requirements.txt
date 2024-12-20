@@ -1,0 +1,31 @@
+# Flask and Web
+flask[async]>=3.0.0
+werkzeug>=3.0.0
+aiohttp>=3.9.1
+requests==2.31.0
+asgiref>=3.7.0
+
+# Environment and Config
+python-dotenv==1.0.0
+
+# Machine Learning and AI
+sentence-transformers==2.2.2
+torch==2.1.0
+transformers==4.47.1
+google-generativeai>=0.3.0
+
+# Database and Storage
+redis==5.0.1
+rq==1.15.1
+pymongo==4.6.1
+qdrant-client>=1.6.0
+
+# Utilities
+numpy>=1.24.0
+python-json-logger>=2.0.0
+typing-extensions>=4.8.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
